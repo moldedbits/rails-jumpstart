@@ -1,14 +1,21 @@
-<h1>Log In</h1>
-<%= form_for :login do |f| %>
-  <div>
-    <%= f.label :email %>
-    <%= f.text_field :email, autofocus: true %>
+<div class="ui three column centered grid">
+  <div class="column">
+    <div class="ui stacked segment">
+      <h1>Log In</h1>
+      <%= form_for :login, html: {class: 'ui fluid form'} do |f| %>
+
+        <div class="field">
+          <%= f.label :email %>
+          <%= f.text_field :email, autofocus: true %>
+        </div>
+        <div class="field">
+          <%= f.label :password %>
+          <%= f.password_field :password %>
+        </div>
+        <div>
+          <%= f.submit "Log In", class: 'ui large teal submit button' %>
+        </div>
+    <% end %>
+    </div>
   </div>
-  <div>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div>
-    <%= f.submit "Log In" %>
-  </div>
-<% end %>
+</div>

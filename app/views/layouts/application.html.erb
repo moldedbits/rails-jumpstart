@@ -7,10 +7,24 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <div class="ui fixed inverted menu">
+      <div class="ui container">
+        <a href="#" class="header item">
+          <img class="logo" src="https://pbs.twimg.com/profile_images/691206086955790336/CDMbA57p_400x400.png">
+          Rails JumpStart
+        </a>
+
+        <% if @current_user.present? %>
+          <a href="#" class="item">Home</a>
+          <%= link_to 'Logout', logout_path, method: :delete, class: 'right aligned item' %>
+        <% end %>
+      </div>
+    </div>
   </head>
 
   <body>
-    <div class="ui container">
+    <div class="ui container" style="margin-top: 55px">
       <%= yield %>
     </div>
   </body>

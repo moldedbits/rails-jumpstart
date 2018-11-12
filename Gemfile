@@ -62,3 +62,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rolify'
 
 gem 'semantic-ui-sass'
+
+gem 'jquery-rails'
